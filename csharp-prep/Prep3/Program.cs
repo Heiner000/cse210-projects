@@ -7,9 +7,12 @@ class Program
     {
         Console.WriteLine("Hello Prep3 World!");
 
-        Console.Write("What is the magic number? ");
-        string userInput = Console.ReadLine();
-        int magicNumber = int.Parse(userInput);
+        Random randomGenerator = new Random();
+        int magicNumber = randomGenerator.Next(1,100);
+
+        // Console.Write("What is the magic number? ");
+        // string userInput = Console.ReadLine();
+        // int magicNumber = int.Parse(userInput);
 
         int guess;
 
@@ -27,7 +30,7 @@ class Program
             {
                 Console.WriteLine("Lower");
             }
-            
+
         } while (guess != magicNumber);
 
         Console.WriteLine("You guessed it!");
