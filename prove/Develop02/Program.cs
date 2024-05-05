@@ -1,5 +1,4 @@
-using System;
-using System.ComponentModel.Design;
+// EXCEEDS CORE REQUIREMENTS: Displays the number of journal entries.
 
 class Program
 {
@@ -60,6 +59,9 @@ class Program
                 // iterate through and display entries from that file
                 myJournal.LoadFromFile(file);
                 Console.WriteLine($"\nLoaded file ~ {file} ~.");
+
+                // EXCEEDS CORE: Displays how many entries the user has in the journal.
+                Console.WriteLine($"\nNumber of entries: {myJournal._entries.Count}.");
             }
             else if (menuOption == 4) // Save
             {

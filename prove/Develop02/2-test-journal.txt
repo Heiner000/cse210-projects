@@ -1,0 +1,2 @@
+Date: 5/4/2024 | Prompt: How much money did I spend today? | $80
+Date: 5/4/2024 | Prompt: What was the strongest emotion I felt today? | anxiety/stress

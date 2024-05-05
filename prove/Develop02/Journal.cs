@@ -1,5 +1,4 @@
-using System.IO;
-using System.IO.Enumeration;
+// EXCEEDS CORE REQUIREMENTS: Displays the number of journal entries.
 
 public class Journal
 {
@@ -11,6 +10,9 @@ public class Journal
     }
     public void DisplayAll()
     {
+        // EXCEEDS CORE: Displays how many entries the user has in the journal
+        Console.WriteLine($"\nYou have {_entries.Count} journal entries: ");
+
         foreach (Entry e in _entries)
         {
             e.Display();
@@ -18,8 +20,6 @@ public class Journal
     }
     public void SaveToFile(string file)
     {
-        // Console.Write("What is the file name?");
-        // string fileName = Console.ReadLine();
         using (StreamWriter outputFile = new StreamWriter(file))
         {
             foreach (Entry e in _entries)
@@ -29,10 +29,7 @@ public class Journal
         }
     }
     public void LoadFromFile(string file)
-    {
-        // Console.Write("What is the file name? ");
-        // string file = Console.ReadLine();
-        
+    {      
         _entries.Clear();
         string[] lines = System.IO.File.ReadAllLines(file);
 
