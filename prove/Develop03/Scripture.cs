@@ -22,7 +22,13 @@ public class Scripture
 
     public string GetDisplayText()
     {
-        return "";
+        string displayText = $"{_reference.GetDisplayText()} ";
+        
+        foreach (Word word in _words)
+        {
+            displayText += word.GetDisplayText() + " ";
+        }
+        return displayText;
     }
 
     public bool IsCompletelyHidden()

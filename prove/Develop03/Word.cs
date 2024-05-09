@@ -25,6 +25,13 @@ public class Word {
 
     public string GetDisplayText()
     {
-        return "";
+        if (_isHidden) // if word is hidden, replace word with underscore
+        {
+            return new string('_', _text.Length);
+        }
+        else // if not, return the word
+        {
+            return _text;
+        }
     }
 }
