@@ -8,7 +8,7 @@ class Program
 
         while (true)
         {
-            Console.WriteLine("Select an activity: ");
+            Console.WriteLine("\nSelect an activity: ");
             Console.WriteLine("1. Breathing Activity");
             Console.WriteLine("2. Reflecting Activity");
             Console.WriteLine("3. Listing Activity");

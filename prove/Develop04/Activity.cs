@@ -12,9 +12,9 @@ public abstract class Activity
 
     public void DisplayStartingMessage()
     {
-        System.Console.WriteLine($"Starting {_name} Activity");
+        System.Console.WriteLine($"\nWelcome to the {_name} Activity");
         Console.WriteLine(_description);
-        Console.WriteLine("Enter duration in seconds: ");
+        Console.Write("Enter duration in seconds: ");
         _duration = int.Parse(Console.ReadLine());
         Console.WriteLine("Prepare to begin... ");
         ShowSpinner(3);
