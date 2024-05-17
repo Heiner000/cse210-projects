@@ -1,3 +1,5 @@
+// EXCEEDS REQUIREMENTS - Added an additional activity to the list - Gratitude Activity.
+
 class Program
 {
     static void Main(string[] args)
@@ -12,7 +14,8 @@ class Program
             Console.WriteLine("1. Breathing Activity");
             Console.WriteLine("2. Reflecting Activity");
             Console.WriteLine("3. Listing Activity");
-            Console.WriteLine("4. Quit");
+            Console.WriteLine("4. Gratitude Activity");
+            Console.WriteLine("5. Quit");
 
             string userInput = Console.ReadLine();
             Activity activity = null;
@@ -20,19 +23,20 @@ class Program
             if (userInput == "1")
             {
                 activity = new BreathingActivity();
-                // break;
             }
             else if (userInput == "2")
             {
                 activity = new ReflectingActivity();
-                // break;
             }
             else if (userInput == "3")
             {
                 activity = new ListingActivity();
-                // break;
             }
             else if (userInput == "4")
+            {
+                activity = new GratitudeActivity();
+            }
+            else if (userInput == "5")
             {
                 break;
             }
