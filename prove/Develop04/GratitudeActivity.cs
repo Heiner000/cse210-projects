@@ -1,11 +1,13 @@
+// EXCEEDS REQUIREMENTS - Added an additional activity to the list - Gratitude Activity.
+
 public class GratitudeActivity : Activity
 {
-    private int _count;
+    // private int _count;
     private int _goal;
     
     public GratitudeActivity() : base("Gratitude", "\nThis activity will help you develop an attitude of gratitude by counting your blessings. List at least 3 different things you're grateful for.")
     {
-        _count = 0;
+        // _count = 0;
         _goal = 3;
     }
 
@@ -27,16 +29,16 @@ public class GratitudeActivity : Activity
         DisplayEndingMessage();
     }
 
-    private List<string> GetListFromUser()
-    {
-        List<string> items = new List<string>();
-        DateTime endTime = DateTime.Now.AddSeconds(_duration);
-        while (DateTime.Now < endTime)
-        {
-            Console.Write("List item: ");
-            items.Add(Console.ReadLine());
-            _count++;
-        }
-        return items;
-    }
+    // private List<string> GetListFromUser()
+    // {
+    //     List<string> items = new List<string>();
+    //     DateTime endTime = DateTime.Now.AddSeconds(_duration);
+    //     while (DateTime.Now < endTime)
+    //     {
+    //         Console.Write("List item: ");
+    //         items.Add(Console.ReadLine());
+    //         _count++;
+    //     }
+    //     return items;
+    // }
 }

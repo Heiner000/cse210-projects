@@ -3,11 +3,13 @@ public abstract class Activity
     protected string _name;
     protected string _description;
     protected int _duration;
+    protected int _count;
 
     public Activity(string name, string description)
     {
         _name = name;
         _description = description;
+        _count = 0;
     }
 
     public void DisplayStartingMessage()
@@ -55,6 +57,19 @@ public abstract class Activity
             Console.WriteLine("\b \b");
         }
         Console.WriteLine();
+    }
+
+    protected List<string> GetListFromUser()
+    {
+        List<string> items = new List<string>();
+        DateTime endTime = DateTime.Now.AddSeconds(_duration);
+        while (DateTime.Now < endTime)
+        {
+            Console.Write("List item: ");
+            items.Add(Console.ReadLine());
+            _count++;
+        }
+        return items;
     }
 
     public abstract void Run();

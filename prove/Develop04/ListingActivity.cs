@@ -1,6 +1,6 @@
 public class ListingActivity : Activity
 {
-    private int _count;
+    // private int _count;
     private List<string> _prompts = new List<string>
     {
         "Who are people that you appreciate?",
@@ -36,16 +36,16 @@ public class ListingActivity : Activity
         return _prompts[index];
     }
 
-    private List<string> GetListFromUser()
-    {
-        List<string> items = new List<string>();
-        DateTime endTime = DateTime.Now.AddSeconds(_duration);
-        while (DateTime.Now < endTime)
-        {
-            Console.Write("List item: ");
-            items.Add(Console.ReadLine());
-            _count++;
-        }
-        return items;
-    }
+    // private List<string> GetListFromUser()
+    // {
+    //     List<string> items = new List<string>();
+    //     DateTime endTime = DateTime.Now.AddSeconds(_duration);
+    //     while (DateTime.Now < endTime)
+    //     {
+    //         Console.Write("List item: ");
+    //         items.Add(Console.ReadLine());
+    //         _count++;
+    //     }
+    //     return items;
+    // }
 }
