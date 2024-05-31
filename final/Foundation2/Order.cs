@@ -32,8 +32,15 @@ public class Order
         string packingLabel = "Packing List:\n";
         foreach (Product product in _products)
         {
-            packingLabel += $"{product.GetName()} : {product.GetProductID()}";
+            packingLabel += $"{product.GetName()} : {product.GetProductID()}\n";
         }
         return packingLabel;
+    }
+
+    public string GetShippingLabel()
+    {
+        string shippingLabel = "Shipping Label:\n";
+        shippingLabel += $"{_customer.GetName()}\n{_customer.GetAddress()}";
+        return shippingLabel;
     }
 }
